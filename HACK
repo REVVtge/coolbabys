@@ -1,0 +1,51 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("FUCK ERROR FAT L Revv#0009,", "Ocean")
+
+--Main--
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main Section")
+MainSection:NewButton("AutoBuy Eggs Common Triple", "Hatchs The Common Egg Doesnt turn off", function()
+    while wait(.0001) do
+        local args = {
+            [1] = "Common Egg", -- CHANGE THIS TO THE NAME OF THE EGG --
+            [2] = "Buy3"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("GameClient"):WaitForChild("Events"):WaitForChild("RemoteFunction"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))
+        end 
+        
+end)
+MainSection:NewButton("AutoBuy Eggs Common One", "Hatchs The Common Egg Doesnt turn off", function()
+    while wait(.0001) do
+        local args = {
+            [1] = "Common Egg", -- CHANGE THIS TO THE NAME OF THE EGG --
+            [2] = "Buy1"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("GameClient"):WaitForChild("Events"):WaitForChild("RemoteFunction"):WaitForChild("BuyEgg"):InvokeServer(unpack(args))
+        end 
+        
+end)
+MainSection:NewButton("Pets", "Spawns Pets", function()
+    local args = {
+        [1] = "Equip",
+        [2] = {
+            ["PetId"] = "4510694599-9",
+            ["PetName"] = "Huge Cat"   --- Change to pet name
+        }
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("GameClient"):WaitForChild("Events"):WaitForChild("RemoteFunction"):WaitForChild("HandlePet"):InvokeServer(unpack(args))
+    
+
+end)
+MainSection:NewButton("Force Accept", "Force Accepts", function()
+    local args = {
+        [1] = "Billybobhobo12", --Change
+        [2] = "Accept"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("GameClient"):WaitForChild("Events"):WaitForChild("RemoteEvent"):WaitForChild("DeclineTrade"):FireServer(unpack(args))
+    
+end)
+    
